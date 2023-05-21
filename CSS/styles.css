@@ -18,3 +18,33 @@
     background:rgba(0,0,0,0.5);
   }
 
+#precios {
+  margin-top: 3vh;
+}
+
+.callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 0px solid #6b6969;
+  border-left-width: 5px;
+  border-radius: 3px;
+  background-color: #9ec5fe;
+  }
+
+#tarjetaPrecios {
+  margin-inline: 1vw;
+}
+
+#botonTotal {
+margin-inline: 1vw;
+margin-right: auto;
+background-color: YellowGreen;
+color:white
+}
+
+#botonReset {
+margin-inline: 1vw;
+margin-left: auto;
+background-color: YellowGreen;
+color:white
+}
