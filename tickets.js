@@ -8,18 +8,20 @@ buscarTotal.addEventListener("click", calcularPrecio);
 let mostrarTotal = document.getElementById("totalPagar");
 
 function calcularPrecio (precio){
-    if (opcion.value === "Estudiante"){
+    if (opcion.value === "Estudiante" && cantidad.value >0){
         precio = cantidad.value*total*0.2
         mostrarTotal.innerHTML = "Total a pagar: $" + precio; 
-    } else if (opcion.value === "Trainee"){
-        precio = cantidad.value * total * 0.5;
-       mostrarTotal.innerHTML = "Total a pagar: $" + precio; 
-    } else if (opcion.value === "Junior"){
-        precio = cantidad.value * total * 0.85;
-        mostrarTotal.innerHTML = "Total a pagar: $" + precio; 
+    } else if (opcion.value === "Trainee" && cantidad.value > 0) {
+      precio = cantidad.value * total * 0.5;
+      mostrarTotal.innerHTML = "Total a pagar: $" + precio;
+    } else if (opcion.value === "Junior" && cantidad.value > 0) {
+      precio = cantidad.value * total * 0.85;
+      mostrarTotal.innerHTML = "Total a pagar: $" + precio;
+    } else if (cantidad.value>0) {
+      precio = cantidad.value * total;
+      mostrarTotal.innerHTML = "Total a pagar: $" + precio;
     } else {
-        precio = cantidad.value * total;
-        mostrarTotal.innerHTML = "Total a pagar: $" + precio; 
+        alert("Por favor ingrese una cantidad de entradas mayor a 0")
     }
 
 }
