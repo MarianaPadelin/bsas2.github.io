@@ -24,3 +24,8 @@ function calcularPrecio (precio){
 
 }
 
+let borrarTotal = document.getElementById("botonReset");
+borrarTotal.addEventListener(
+  "click",
+  () => (mostrarTotal.innerHTML = "Total a pagar: $")
+);
